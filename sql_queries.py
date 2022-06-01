@@ -108,7 +108,7 @@ REGION 'us-west-2'
 COMPUPDATE OFF
 JSON {};
 """).format(config.get("S3","LOG_DATA"), config.get('IAM_ROLE', 'ARN'), config.get("S3","LOG_JSONPATH"))
-    
+
 staging_songs_copy = ("""
 COPY staging_songs 
 FROM {}
